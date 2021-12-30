@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket bokking</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- fontwesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="assets/css/responsive.css">   
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg" id="my_nav">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#nav_menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav_menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">services
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="service_dropdown">
+                            <li><a href="service.html">buy a bike ticket</a></li>
+                            <li><a href="service.html">buy a car ticket</a></li>
+                            <li><a href="service.html">buy a texi ticket</a></li>
+                            <li><a href="service.html">buy a boat ticket</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">review</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- buy_banner section start -->
+    <section id="contact_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="contact_banner_item">
+                        <h2>buy your ticket</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- buy_banner section end -->
+
+    <!-- buy form section start -->
+    <section id="buy_form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-10">
+                    <div class="buy_container">
+                        <div class="buy_form_item">
+                            <div class="my-2">
+                                <label for="transit">select transit :</label>
+                                <select  id="transit">
+                                    <option value="">Car</option>
+                                    <option value="">Bike</option>
+                                    <option value="">Boat</option>
+                                    <option value="">Texi</option>
+                                </select>
+                            </div>
+                            <div class="my-2">
+                                <label for="name">name</label>
+                                <input class="form-control w-100" type="text" placeholder="enter your name" id="name">
+                            </div>
+                            <div class="my-2">
+                                <span>select your gender :</span>
+                                <label for="male">male :</label>
+								<input class="h-auto mx-2" type="radio" placeholder="" id="male" name="gender" >
+                                <label for="female">female :</label>
+								<input class="h-auto mx-2" type="radio" placeholder="" id="female" name="gender" >
+                            </div>
+                            <div class="my-2">
+                                <label for="email">Email</label>
+                                <input class="form-control w-100" type="email" placeholder="enter your email" id="email">
+                            </div>
+                            <div class="my-2">
+                                <label for="phone">Phone</label>
+                                <input class="form-control w-100" type="tel" placeholder="phone number" id="phone">
+                            </div>
+                            <div class="my-2">
+                                <label for="from">from</label>
+                                <input class="form-control w-100" type="text" placeholder="city name" id="from">
+                            </div>
+                            <div class="my-2">
+                                <label for="to">To</label>
+                                <input class="form-control w-100" type="text" placeholder="city name" id="to">
+                            </div>
+                            <div class="my-2">
+                                <label >select date:</label>
+                                <input class="form-control w-50" type="date">
+                            </div>
+                            <div class="my-2">
+                                <label>select date return(optinal):</label>
+                                <input class="form-control w-50" type="date" >
+                            </div>
+                            <div class="my-2">
+                                <label for="time">select time :</label>
+                                <select class="my-2"  id="time">
+                                    <option value="">2.00 AM</option>
+                                    <option value="">6.00 AM</option>
+                                    <option value="">8.00 PM</option>
+                                    <option value="">10.00 PM</option>
+                                </select>
+                            </div>
+                            <p>total price : <span>1000BDT</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- buy form section end -->
+
+    <!-- buy payment option start -->
+    <section id="buy_payment">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="buy_payment_container">
+                        <div class="row align-items-lg-center">
+                            <div class="col-md-6 col-12">
+                                <h5>payment mobile banking :</h5>
+                                <div class="mobile_banking">
+                                   <div class="row">
+                                       <div class="col-lg-3  col-6">
+                                           <div id="bkash" class="mb_logo"><img src="assets/img/bkash_logo.png" alt="">
+                                            <span>bkash</span>
+                                           </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="upay" class="mb_logo ">
+                                               <img src="assets/img/upay.png" alt="">
+                                               <span>upay</span>
+                                           </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="rocket" class="mb_logo ">
+                                               <img src="assets/img/rocket.svg" alt="">
+                                               <span>rocket</span>
+                                            </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="abbank" class="mb_logo ">
+                                               <img src="assets/img/abbank.png" alt="">
+                                               <span>abbank</span>
+                                            </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="okwallet" class="mb_logo ">
+                                               <img src="assets/img/okwallet.png" alt="">
+                                               <span>okwallet</span>
+                                            </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="mycash" class="mb_logo ">
+                                               <img src="assets/img/mycash.png" alt="">
+                                               <span>mycash</span>
+                                            </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="mcash" class="mb_logo ">
+                                               <img src="assets/img/mcash.svg" alt="">
+                                               <span>mcash</span>
+                                            </div>
+                                       </div>
+                                       <div class="col-lg-3  col-6">
+                                           <div id="dmoney" class="mb_logo ">
+                                               <img src="assets/img/dmoney.png" alt="">
+                                               <span>dmoney</span>
+                                            </div>
+                                       </div>
+                                   </div>
+                                   <div class="text-center">
+                                       <button class="btn" type="submit">buy ticket</button>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 mt-3 mt-md-0">
+                               <h5>pay banking card :</h5>
+                               <div class="pyment_bank_card">
+                                    <div class="mb-3 ">
+                                        <input class="w-100" type="tel" placeholder="Enter Card Number">
+                                    </div>
+                                    <div class="my-3 d-flex flex-wrap">
+                                        <input class="w-48 me-2 mt-2 mt-lg-0" type="text" placeholder="MM/YY">
+                                        <input class="w-48 mt-2 mt-lg-0" type="text" placeholder="CVC/CVV">
+                                    </div>
+                                    <div class="my-3 ">
+                                        <input class="w-100" type="text" placeholder="Card Holder Name">
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn" type="submit">buy ticket</button>
+                                    </div>
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- buy payment option end -->
+
+    <!-- footer section start -->
+    <section id="footer">
+        <div class="top_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="top_footer_item">
+                            <h4 class="text-uppercase">contact</h4>
+                            <ul>
+                                <li>
+                                    <i class="far fa-envelope"></i>
+                                    <a href="#">lorem@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="#">0149453533435</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <a href="#">chittagong, bangladesh</a>
+                                </li>
+                            </ul>
+                        </div>
+                   </div>
+                   <div class="col-lg-4">
+                       <div class="top_footer_item">
+                           <h4>services</h4>
+                           <ul>
+                               <li><a href="service.html">Buy a bike ticket</a></li>
+                               <li><a href="service.html">Buy a car ticket</a></li>
+                               <li><a href="service.html">Buy a boat ticket</a></li>
+                               <li><a href="service.html">Buy a texi ticket</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="col-lg-4">
+                       <div class="top_footer_item">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img src="" alt="logo">
+                                </a>
+                            </div>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque provident voluptatibus, quis optio alias amet eius eos.</p>
+                           <div class="top_footer_icon">
+                                <ul class="abc">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                                    </li>
+                                </ul>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_footer text-center  text-white">
+            <p>&copy Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+    <!-- footer section end -->
+    
+    <!--backToTop button  -->
+    <button id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+
+
+
+    <!-- jquary js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- slick js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

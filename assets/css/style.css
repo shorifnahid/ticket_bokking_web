@@ -1,0 +1,786 @@
+/* common css start */
+h1,h2,h3,h4,h5,h6,
+p,span,
+ul,ol{
+    margin: 0;
+    padding: 0;
+}
+a,a:hover{
+    text-decoration: none;
+}
+body{
+    font-family:'Roboto', sans-serif;
+    overflow-x:hidden ;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+    display: block;
+}
+:root{
+    --white-color:#fff;
+}
+/* common css end */
+
+/* navbar css start */
+#my_nav{
+    position: fixed;
+    background-color: #01162B;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999999;
+}
+#my_nav button span{
+    width: 20px;
+    height: 2px;
+    background-color: var(--white-color);
+    position: relative;
+    display: inline-block;
+
+}
+#my_nav button span::after,
+#my_nav button span::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    background-color: var(--white-color);
+}
+#my_nav button span::before{
+    top: -6px;
+}
+#my_nav button span::after{
+    bottom: -6px;
+}
+#my_nav #nav_menu ul li a{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    position: relative;
+    display:inline-block;
+}
+#my_nav #nav_menu ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: yellow;
+    bottom: 0;
+    left: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#my_nav #nav_menu ul li:hover a::after{
+    width: 100%;
+}
+
+#my_nav #nav_menu ul li:hover a{
+    color: yellow;
+}
+#my_nav #nav_menu ul li .service_dropdown{
+    background-color: #01162B;
+    min-width: 220px;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    margin-top: 20px;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+#my_nav #nav_menu ul li:hover .service_dropdown{
+    display: block;
+    margin-top: 0;
+}
+#my_nav #nav_menu ul li .service_dropdown li{
+    margin: 10px 5px;
+}
+#my_nav #nav_menu ul li .service_dropdown li a{
+    color: var(--white-color);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#my_nav #nav_menu ul li .service_dropdown li:hover a{
+    color: yellow;
+}
+#my_nav #nav_menu ul li .service_dropdown li a::after{
+    width: 0;
+    height: 2px;
+    background-color: yellow;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#my_nav #nav_menu ul li .service_dropdown li:hover a::after{
+    width: 100%;
+}
+/* navbar css end */
+
+/* slider css start */
+#slider{
+    position: relative;
+}
+#slider .slider_dots{
+    position: absolute;
+    left: 50%;
+    bottom:100px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#slider .slider_dots li{
+    display: inline-block;
+    margin: 0 5px;
+}
+#slider .slider_dots li button{
+    background: none;
+    font-size: 0;
+    border: 1px solid var(--white-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#slider .slider_dots li:hover button{
+    background-color: var(--white-color);
+}
+#slider .slider_dots li.slick-active button{
+    background-color: var(--white-color);
+}
+#slider .slider_slick .slider_container{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    background-repeat:no-repeat ;
+    position: relative;
+    z-index: 1;
+}
+#slider .slider_slick .slider_container::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 21, 21, 0.51);
+    z-index: -1;
+}
+#slider .slider_slick .slider_container .slider_item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+#slider .slider_slick .slider_container .slider_item h2{
+    color: var(--white-color);
+    text-transform:capitalize;
+    font-size: 50px;
+    font-weight: 900;
+}
+#slider .slider_slick .slider_container .slider_item p{
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+/* slider css end */
+
+/* services css start */
+#service{
+    padding: 50px 0;
+}
+#service .service_ttle{
+    margin-bottom: 50px;
+}
+#service .service_ttle h3{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+}
+#service .service_ttle p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(32, 11, 11);
+    text-transform: capitalize;
+}
+#service .services_item{
+    box-shadow: 0px 0px 10px 2px;
+    padding: 20px;
+    margin: 10px 0;
+}
+#service .services_item a{
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #111;
+    padding: 10px 5px;
+    display: inline-block;
+    width: 100%;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#service .services_item a:hover{
+    color: yellow;
+}
+
+/* services css end */
+
+/* about css start */
+#about{
+    padding: 50px 0;
+}
+#about .about_ttle{
+    margin-bottom: 50px;
+}
+.about_ttle h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.about_ttle p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #201a1a;
+}
+#about .about_item{
+    background-color: #bababa;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#about .about_item h3{
+    font-size: 25px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#about .about_item p{
+    font-size: 16px;
+    color: #242020;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+/* about css end */
+
+/* contact_banner css start */
+#contact_banner{
+    background-color: #2E8877;
+    height: 250px;
+    position: relative;
+}
+#contact_banner .contact_banner_item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+#contact_banner .contact_banner_item h2{
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* contact_banner css end */
+
+/* contact css start */
+#contact{
+    padding: 50px 0;
+}
+#contact .contact_ttle{
+    margin-bottom: 50px;
+}
+#contact .contact_ttle h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+#contact .contact_ttle p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #242020;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+#contact .contact_form{
+    box-shadow: 0px 0px 5px -1px;
+    padding:50px 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#contact .contact_form label{
+    text-transform: capitalize;
+    color: #111;
+    margin: 8px 0;
+    font-size: 18px;
+}
+#contact .contact_form input,
+#contact .contact_form textarea{
+    height: 50px;
+    padding: 10px;
+    color: #111;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 2px solid #848181;
+    font-size: 15px;
+}
+#contact .contact_form textarea{
+    height: 200px;
+    resize: none;
+}
+#contact .contact_form button{
+    border: 1px solid #111;
+    background-color: #111;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#contact .contact_form button:hover{
+    background-color: red;
+    color: yellow;
+    border-color: red;
+}
+/* contact css end */
+
+/* service css start */
+    /* buy_form css start */
+    #buy_form{
+        padding: 50px 0;
+    }
+    #buy_form .buy_form_item select{
+        background: none;
+        border: 1px solid #111;
+        height: 100%;
+        min-width: 80px;
+        text-transform: uppercase;
+        margin-left: 10px;
+        text-align: center;
+        padding: 4px;
+        font-size: 16px;
+        color: #111;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    #buy_form .buy_form_item select option{
+        font-size: 16px;
+        color: #111;
+        font-weight: 400;
+        
+    }
+    #buy_form .buy_form_item span{
+        font-size: 16px;
+        color: #111;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+    #buy_form .buy_form_item label{
+        font-size: 18px;
+        font-weight: 400;
+        color: #111;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    #buy_form .buy_form_item input{
+        height: 40px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+#buy_form .buy_form_item input[type="date"]{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+    #buy_form .buy_form_item p{
+        font-size: 25px;
+        font-weight: 500;
+        color: #0F1F2E;
+        text-transform: uppercase;
+    }
+    #buy_form .buy_form_item p span{
+        color: #2E8877;
+        font-size: 25px;
+    }
+    /* buy_form css end */
+
+    /* buy_payment css start */
+    #buy_payment{
+        padding: 50px 0;
+    }
+    #buy_payment .buy_payment_container h5{
+        font-size: 25px;
+        font-weight: 600;
+        color: #111;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #01162B;
+    }
+    #buy_payment .buy_payment_container .mobile_banking,
+    #buy_payment .buy_payment_container .pyment_bank_card{
+        box-shadow: 1px 1px 1px 1px #bababa;
+        padding: 20px 30px;
+        border: 2px solid #0F1F2E;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+        font-weight: 400;
+        color: #111;
+        align-items: center;
+        border: 1px solid #e4dcdc;
+        height: 45px;
+        box-shadow: 0px 0px 6px 0px;
+        margin-bottom: 20px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo:hover{
+        border: 1px solid red;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo img{
+        width: auto;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo span{
+        margin-left:10px ;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo:hover span{
+        color: red;
+    }
+    #buy_payment .buy_payment_container .mobile_banking .mb_logo.active{
+        border: 1px solid red;
+    }
+    #buy_payment .buy_payment_container .pyment_bank_card input{
+        padding:6px 8px;
+        color: #111;
+    }
+    #buy_payment .buy_payment_container  button{
+        background-color: red;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--white-color);
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding: 10px 20px;
+        width: 250px;
+    }
+    /* buy_payment css end*/
+/* service css end */
+
+/* review css start */
+#review{
+    padding: 50px 0;
+}
+#review .review_ttle{
+    margin-bottom: 50px;
+}
+#review .review_ttle h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+#review .review_ttle p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #242020;
+    text-transform: capitalize;
+}
+#review .review_form{
+    box-shadow: 0px 0px 5px -1px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#review .review_form label{
+    font-size: 20px;
+    color: #111;
+    margin: 8px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+#review .review_form input,
+#review .review_form textarea{
+    border: 2px solid #848181;
+    padding: 10px;
+    font-size: 15px;
+    color: #111;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#review .review_form textarea{
+    height: 150px;
+    resize: none;
+}
+#review .review_form button{
+    border: 1px solid #111;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    background-color: #111;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 15px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#review .review_form button:hover{
+    background-color: red;
+    border-color: red;
+}
+/* review css end */
+
+/* partnar css start */
+#partnar{
+    padding: 50px 0;
+    position: relative;
+}
+/*#partnar .partnar_arrow{
+    position: absolute;
+    font-size: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #404040;
+    text-align: center;
+    cursor: pointer;
+    color: var(--white-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 1111;
+}
+#partnar .partnar_arrow:hover{
+    background-color: red;
+}
+#partnar .partnar_arrow.partnar_left{
+    left: -50px;
+}
+#partnar .partnar_arrow.partnar_right{
+    right: -50px;
+}*/
+#partnar .partnar_ttle{
+    margin-bottom: 50px;
+}
+#partnar .partnar_ttle h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+#partnar .partnar_ttle p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #242020;
+    text-transform: capitalize;
+}
+
+#partnar .partnar_slick .partnar_logo {
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0px 0px 8px 0px ;
+}
+
+/* partnar css end */
+
+/* footer css start */
+
+#footer .top_footer{
+    background-color: #0F1F2E;
+    padding: 40px 0;
+}
+#footer .top_footer .footer_logo{
+    margin-bottom: 20px;
+}
+#footer .top_footer .top_footer_item h4{
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+#footer .top_footer .top_footer_item h4::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: yellow;
+}
+#footer .top_footer .top_footer_item ul li{
+    margin-top: 8px;
+}
+#footer .top_footer .top_footer_item ul li i{
+    color: #bababa;
+    margin-right: 5px;
+}
+#footer .top_footer .top_footer_item ul li a{
+    display: inline-block;
+    color: #bababa;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+#footer .top_footer .top_footer_item ul li a:hover{
+    padding-left: 5px;
+    color: rgb(105, 105, 6);
+}
+#footer .top_footer .top_footer_item p{
+    color: #bababa;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#footer .top_footer .top_footer_item .top_footer_icon ul li{
+    display: inline-block;
+    margin-right:5px ;
+}
+#footer .top_footer .top_footer_item .top_footer_icon ul li a{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #111;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#footer .top_footer .top_footer_item .top_footer_icon ul.abc li a:hover{
+    padding-left: 0;
+    background-color: red;
+}
+#footer .bottom_footer{
+    padding: 20px 0;
+    background-color: #01162B;
+}
+#footer .bottom_footer p{
+    color: #bababa;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* footer css end */
+
+/* backToTop css */
+#backToTop{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 30px;
+    background-color: red;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 999999;
+}
+
